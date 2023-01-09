@@ -22,6 +22,7 @@
 <div class="background-relogio">
     <div class="style-info relogio"><span class="hora"></span> : <span class="minutos"></span> : <span class="segundos"></span></div>
     <div class="style-info data"></div>
+    <div class="noscript">Seu navegador não é compatível</div>
 </div>
 
         </div>
@@ -30,6 +31,35 @@
 </main>
 
 <script src="assets/js/app.js"></script>
+<noscript>
+<style>
+
+.style-info {
+
+display: none;
+
+}    
+
+.noscript {
+
+display: block;
+font-family: 'ubuntu';
+font-size: 2em;
+color: white;
+
+}
+
+@media (max-width: 530px) {
+    
+.noscript {
+
+font-size: 0.8em;
+
+}
+
+}
+</style>
+</noscript>
 
 </body>
 </html>

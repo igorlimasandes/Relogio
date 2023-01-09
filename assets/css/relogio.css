@@ -124,6 +124,12 @@ margin: 7px;
 
 }
 
+.noscript {
+
+display: none;
+
+}
+
 @media (max-width: 1100px) {
     
 .background-relogio {
