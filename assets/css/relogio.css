@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+#relogio {
+
+width: 100%;
+height: 100vh;
+
+}
+
+.container-relogio {
+
+display: flex;    
+justify-content: center;
+align-items: center;
+height: 100vh;      
+
+
+}
+
+.background-relogio {
+
+width: 50%;
+height: 80%;
+border-radius: 22px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+overflow: hidden;
+
+}
+
+.background-relogio::before {
+
+content: " ";
+position: absolute;
+width: 250px;
+height: 1000%;
+background-image: linear-gradient(90deg,  #c4441d 50%, #ff3300 50%);
+animation: borda-360deg 6s cubic-bezier(1, 1, 1, 1) infinite;
+z-index: -1;
+
+
+}
+
+.background-relogio::after  {
+
+content: " ";    
+inset: 5px;
+position: absolute;
+background-color: #222;
+border-radius: 22px;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+z-index: -1;
+
+}
+
+.madrugada .background-relogio::after  {
+  
+background-image: url(../imgs/noite.svg);
+
+}
+
+.madrugada .style-info {
+
+color: white;
+    
+}
+
+.amanhecendo .background-relogio::after {
+
+background-image: url(../imgs/amanhecendo.svg);
+
+}
+
+.manha .background-relogio::after {
+
+background-image: url(../imgs/manha.svg);
+
+}
+
+.tarde .background-relogio::after {
+
+background-image: url(../imgs/tarde.svg);    
+
+}
+
+.pordosol .background-relogio::after {
+
+background-image: url(../imgs/pordosol.svg);
+
+}
+
+.noite .background-relogio::after {
+
+background-image: url(../imgs/noite.svg);
+
+}
+
+.noite .style-info {
+
+color: white;
+        
+}
+
+.style-info {
+
+color: black;
+position: relative;
+z-index: 1;
+font-family: "ubuntu";
+font-size: 1em;
+margin: 3px;
+
+}
+
+.relogio {
+
+font-size: 4.2em;
+margin: 7px;
+
+}
+
+@media (max-width: 1100px) {
+    
+.background-relogio {
+
+width: 90%;
+height: 90%;
+        
+}
+}
+
+@media (max-width: 800px) {
+
+.background-relogio {
+
+width: 99%;
+height: 99%;
+                
+}
+
+}
+
+@media (max-width: 500px) {
+
+.relogio {
+
+font-size: 3em;
+
+        
+}
+
+.tarde .background-relogio::after {
+
+background-position: right;
+    
+}
+
+.pordosol .background-relogio::after{
+
+background-position: right;
+
+}
+
+}
+
